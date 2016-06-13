@@ -1,0 +1,384 @@
+$green: rgb(11, 78, 55);
+$greenLigth: rgb(124, 166, 104);
+$pink: rgb(252, 87, 94);
+$yellow: rgb(251, 202, 84);
+$blue: rgb(57, 142, 196);
+$pinkLight: rgb(255, 178, 171);
+$white: rgb(255, 255, 209);
+$bgBlue: rgba(53, 188, 175, 0.7);
+$bgBlueDots: rgb(194, 234, 233);
+$black: rgba(0, 0, 0, 0.5);
+
+@mixin ribbon {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 30px 51px 30px;
+}
+
+
+  html {
+    height: 100%;
+  }
+  body {
+    background:
+    radial-gradient($bgBlueDots 13%, transparent 14%),
+    radial-gradient($bgBlueDots 13%, transparent 14%),
+    $bgBlue;
+    background-position: 0 0, 80px 80px;
+    background-size:160px 160px;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    height: 100%;
+    color: $green;
+  }
+
+a:focus {
+  outline: none;
+}
+
+  /*menu*/
+  #menu {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    margin-right: 20px;
+    display: inline-block;
+    z-index: 9999;
+    @media (max-width: 768px) {
+      margin-right: 0;
+      position: relative;
+      display: block;
+      top: 0;
+      left: auto;
+      text-align: center;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      top: -50px;
+      font-family: 'Courgette', cursive;
+      font-size: 1.5em;
+      color: $green;
+      text-decoration: none;
+      @media (max-width: 768px) {
+        margin-bottom: 50px;
+        &:active {
+          color: white;
+        }
+      }
+      .ribbon {
+        min-height: 50px;
+        width: 60px;
+        margin-right: 5px;
+        background: transparent;
+        @media (max-width: 992px) {
+          width: 50px;
+          margin-right: 0;
+        }
+        @media (max-width: 320px) {
+          width: 45px;
+          height: 50px;
+        }
+        &#first1 {
+          &:after {
+            @include ribbon;
+            border-color: transparent $greenLigth transparent $greenLigth;
+            @media (max-width: 992px) {
+              border-width: 0px 30px 51px 20px;
+            }
+            @media (max-width: 320px) {
+              border-width: 0px 25px 51px 20px;
+            }
+          }
+        }
+        &#second2 {
+          &:after {
+            @include ribbon;
+            border-color: transparent $pink transparent $pink;
+            @media (max-width: 992px) {
+              border-width: 0px 30px 51px 20px;
+            }
+            @media (max-width: 320px) {
+              border-width: 0px 25px 51px 20px;
+            }
+          }
+        }
+        &#third3 {
+          &:after {
+            @include ribbon;
+            border-color: transparent $yellow transparent $yellow;
+            @media (max-width: 992px) {
+              border-width: 0px 30px 51px 20px;
+            }
+            @media (max-width: 320px) {
+              border-width: 0px 25px 51px 20px;
+            }
+          }
+        }
+        &#fourth4 {
+          &:after {
+            @include ribbon;
+            border-color: transparent $blue transparent $blue;
+            @media (max-width: 992px) {
+              border-width: 0px 30px 51px 20px;
+            }
+            @media (max-width: 320px) {
+              border-width: 0px 25px 51px 20px;
+            }
+          }
+        }
+        &#fifth5 {
+          &:after {
+            @include ribbon;
+            border-color: transparent $pinkLight transparent $pinkLight;
+            @media (max-width: 992px) {
+              border-width: 0px 30px 51px 20px;
+            }
+            @media (max-width: 320px) {
+              border-width: 0px 25px 51px 20px;
+            }
+          }
+        }
+      }
+      .menu {
+        display: inline-block;
+        margin-right: 5px;
+        width: 60px;
+        height: 250px;
+        @media (max-width: 992px) {
+          width: 50px;
+          margin-right: 0;
+        }
+        @media (max-width: 320px) {
+          width: 45px;
+          height: 150px;
+        }
+        &#first {
+          background: $greenLigth;
+        }
+        &#second {
+          background: $pink;
+        }
+        &#third {
+          background: $yellow;
+        }
+        &#fourth {
+          background: $blue;
+        }
+        &#fifth {
+          background: $pinkLight
+        }
+        p {
+          transform-origin: bottom;
+          transform: rotate(-78deg);
+          margin-top: 200px;
+          line-height: 0px;
+          text-align: center;
+          @media (max-width: 768px) {
+            margin-top: 170px;
+          }
+          @media (max-width: 320px) {
+            margin-top: 120px;
+          }
+        }
+      }
+    }
+  }
+  #icons {
+    position: fixed;
+    left: 50px;
+    bottom: 80px;
+    text-align: center;
+    @media (max-width: 768px) {
+      z-index: 9999;
+      position: relative;
+      display: block;
+      left: auto;
+      text-align: center;
+      top: 400px;
+    }
+    p {
+      font-family: 'Courgette', cursive;
+      font-size: 1.5em;
+    }
+    div {
+      display: inline-block;
+      width: 70px;
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  /*sections*/
+  .two, .three, .four, .five {
+    display: none;
+  }
+  .section {
+    height: 100vh;
+    padding: 75px 20px 40px;
+    @media (max-width: 992px) {
+      height: 850px;
+      padding-top: 20px;
+    }
+    @media (max-width: 768px) {
+      display: block !important;
+    }
+    @media (max-width: 320px) {
+      height: 900px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    #mySelf {
+      margin-top: 150px;
+      @media (max-width: 768px) {
+        padding-top: 150px;
+      }
+      p {
+        font-size: 30px;
+        text-align: center;
+        span {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  .one {
+    @media (max-width: 768px) {
+      height: 500px;
+      padding-top: 0px;
+      #mySelf {
+        margin-top: -80px;
+        padding-top: 0;
+      }
+      h2 {
+        display: none;
+      }
+    }
+  }
+  .two {
+    background: $pink;
+    #mySkills {
+      text-align: center;
+      ul {
+        margin-left: -30px;
+        li {
+          list-style-type: none;
+          margin-top: 20px;
+          font-size: large;
+        }
+      }
+    }
+  }
+  .three {
+    background: $yellow;
+    .logo-placeholder {
+      text-align: center;
+      @media (max-width: 768px) {
+        margin-top: 30px;
+      }
+      .logo {
+        height: 100px;
+        max-width: 150px;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .four {
+    background: $blue;
+    .pf-placeholder {
+      text-align: center;
+      @media (max-width: 992px) {
+        margin-top: 30px;
+      }
+      .onyxia {
+        background: url('../../images/onix.png') no-repeat center center;
+        background-size: 200px 200px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+        height: 300px;
+        text-align: center;
+          span {
+            color: $black;
+            font-size: 2.5em;
+            margin-top: 150px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            &:hover {
+              border-bottom: 1px solid $black;
+              transition: border-bottom 1s;
+            }
+          }
+        }
+      }
+    }
+  .five {
+    background: $pinkLight;
+    button {
+      float: right;
+      background: $green;
+      color: $white;
+      border: none;
+      &:hover {
+        background: $greenLigth;
+      }
+    }
+    #info {
+      margin-top: 30px;
+      p {
+        text-align: right;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  /*footer*/
+  footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $green;
+    color: $white;
+    line-height: 25px;
+    text-align: center;
+    @media (max-width: 768px) {
+      position: relative;
+    }
+  }
+
+
+
+  .active {
+    top: 0 !important;
+    transition: top 0.6s;
+  }
+  .active-not {
+    top: -50px !important;
+    transition: top 0.5s;
+  }
+  a.back-to-top {
+    display: none;
+    width: 70px;
+    height: 70px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 30px;
+    background: url("../../images/up-arrow.png") no-repeat center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }

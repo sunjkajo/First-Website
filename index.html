@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Jovana Šunjka</title>
+    <link rel="shortcut icon" href="assets/images/spiral.png" type="image/png">
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link  rel="stylesheet"  type="text/css" href="assets/styles/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Courgette&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5">
+                <nav id="menu">
+                    <a href="#home" class="page-scroll"><div class="menu" id="first"><p>home</p></div><div class="ribbon" id="first1"></div></a>
+                    <a href="#skills" class="page-scroll"><div class="menu" data-id="two" id="second"><p>skills</p></div><div class="ribbon" id="second2"></div></a>
+                    <a href="#education" class="page-scroll"><div class="menu" data-id="three" id="third"><p>education</p></div><div class="ribbon" id="third3"></div></a>
+                    <a href="#portfolio" class="page-scroll"><div class="menu" data-id="four" id="fourth"><p>portfolio</p></div><div class="ribbon" id="fourth4"></div></a>
+                    <a href="#contact" class="page-scroll"><div class="menu"  data-id="five" id="fifth"><p>contact</p></div><div class="ribbon" id="fifth5"></div></a>
+                </nav>
+                <div id="icons">
+                    <p>You can find me here:</p>
+                    <div><a href="https://www.linkedin.com/in/jovana-%C5%A1unjka-1364b761?trk=hp-identity-name"><img src="assets/images/linkedin.png"></a></div>
+                    <div><a href="mailto:jovanasunjka@gmail.com"><img src="assets/images/gmail.png"></a></div>
+                    <div><a href="skype:jovanasunjka?call"><img src="assets/images/skype.png"></a></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 sections">
+                <section  class="section one">
+                        <h2 id="home"></h2>
+                        <div id="mySelf">
+                            <p>Hello,</p>
+                            <p>My name is <span>Jovana Šunjka</span></p>
+                            <p>and I am a <span>Front-Еnd Web Developer</span>.</p>
+                        </div>
+                </section>
+                <section class="section two">
+                    <h2 id="skills">My Skills</h2>
+                    <div id="mySkills">
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3, Sass</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript, jQuery, Angular</li>
+                            <li>Npm, Gulp, Bower</li>
+                            <li>GitHub, Bitbucket</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section three">
+                    <h2 id="education">My Education</h2>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 logo-placeholder">
+                            <img src="assets/images/aleph.png" class="logo"/>
+                            <p>„Front-End Web Development” course</p>
+                            <p>Aleph ICT, Novi Sad</p>
+                            <p>2016</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 logo-placeholder">
+                            <img src="assets/images/pmf.png" class="logo"/>
+                            <p>Faculty of sciences, Novi Sad</p>
+                            <p>Department of chemistry, biochemistry and environmental protection</p>
+                            <p>Master of biochemistry, 2012-2013</p>
+                            <p>Bachelor with honours in biochemistry, 2007-2012</p>
+                        </div>
+                        <div class="col-sm-12 col-md-4 logo-placeholder">
+                            <img src="assets/images/jjz.png" class="logo"/>
+                            <p>High school "Jovan Jovanović Zmaj", Novi Sad</p>
+                            <p>2003 - 2007</p>
+                            <p>Mathematical and natural science</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section four">
+                    <h2 id="portfolio">My Portfolio</h2>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 pf-placeholder">
+                            <div class="pf onyxia main">
+                                <a href="http://jovanasunjka.dx.am/onyxia/"><span>ONYXIA</span></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 pf-placeholder">
+                            <div class="pf onyxia blog">
+                                <a href="http://jovanasunjka.dx.am/onyxia/blog.html"><span>BLOG</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section five">
+                    <h2 id="contact">Contact me</h2>
+                    <form method="post" action="mail.php">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-10">
+                                <div class="form-group row">
+                                    <label for="inputName" class="col-sm-4 form-control-label">First and Last Name:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="inputName" placeholder="Your Name" name="name" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputEmail" class="col-sm-4 form-control-label">Email:</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Your Email" name="email" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="textareaMessage" class="col-sm-4 form-control-label">Send a Message:</label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" id="textareaMessage" placeholder="Your message" rows="5" name="msg" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-10">
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="info" class="col-sm-12 col-lg-10">
+                                <p><i class="fa fa-birthday-cake fa-lg"></i> 18.09.1988.</p>
+                                <p><i class="fa fa-map-marker fa-lg"></i> Branislava Nušića 1, Novi Sad</p>
+                                <p><i class="fa fa-mobile fa-lg"></i> 064/2581241</p>
+                                <p><i class="fa fa-envelope fa-lg"></i> jovanasunjka@gmail.com</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+            <div>Jovana Šunjka &copy; 2016</div>
+    </footer>
+
+    <script src="assets/scripts/script.js" type="text/javascript"></script>
+</body>
+</html>
